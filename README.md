@@ -4,6 +4,17 @@ A standalone React and Vite preview of Pehnam's private combat-sports coaching
 booking experience. It does not connect to a backend, list live coach
 availability, or process bookings.
 
+Coach names, biographies, experience, rates, neighborhoods, and availability in
+the directory are illustrative sample content. Confirm all coach information
+before publishing; the calendar is a visual preview and does not show live
+availability.
+
+## Preview pages
+
+The site includes the booking landing page, coach listing and profile,
+discipline index and detail pages, How It Works, and About. All routes use
+hash-based navigation for GitHub Pages compatibility.
+
 ## Run locally
 
 Requirements: Node.js 22 or newer and npm.

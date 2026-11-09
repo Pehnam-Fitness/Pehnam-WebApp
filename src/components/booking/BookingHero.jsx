@@ -1,6 +1,6 @@
 import { Flame, Target, Shield, Activity, Swords } from "lucide-react";
 import { DISCIPLINES } from "@/data/sampleContent";
-import heroImage from "../../Screenshot 2026-11-09 153059.png";
+import heroImage from "@/images/booking-hero.jpeg";
 
 const ICONS = { Flame, Target, Shield, Activity, Swords };
 
@@ -11,7 +11,7 @@ export default function BookingHero({ activeDiscipline, onSelectDiscipline }) {
         src={heroImage}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-[center_38%]"
+        className="absolute inset-0 h-full w-full object-cover object-[center_38%] grayscale"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/85 via-[#0A0A0A]/55 to-[#0A0A0A]/25" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/10 to-[#0A0A0A]/35" />
@@ -27,8 +27,7 @@ export default function BookingHero({ activeDiscipline, onSelectDiscipline }) {
               Book your corner.
             </h1>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/65">
-              Verified Halifax combat-sports coaches. Private one-to-one sessions, booked around
-              your week.
+              Private one-to-one coaching in Halifax, shaped around your goals and your pace.
             </p>
           </div>
 

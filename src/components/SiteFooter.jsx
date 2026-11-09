@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Music2, Mail, BadgeCheck, MapPin, Users, Sparkles } from "lucide-react";
-import PandaMark from "@/components/PandaMark";
+import { BadgeCheck, MapPin, Users, Sparkles } from "lucide-react";
 import { TRUST_PILLARS } from "@/data/sampleContent";
+import logo from "@/images/pehnam-logo.png";
 
 const ICONS = { BadgeCheck, MapPin, Users, Sparkles };
 
 const LINKS = [
+  { label: "Home", to: "/" },
   { label: "Coaches", to: "/coaches" },
   { label: "Disciplines", to: "/disciplines" },
   { label: "How it works", to: "/how-it-works" },
@@ -36,15 +37,18 @@ export default function SiteFooter() {
         <div className="shell grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr] md:py-16">
           <div>
             <div className="flex items-center gap-2.5">
-              <PandaMark className="h-9 w-9 text-white" />
-              <span className="font-heading text-[14px] font-semibold tracking-[0.32em]">PEHNAM</span>
+              <img
+                src={logo}
+                alt="Pehnam Fitness"
+                className="h-14 w-[86px] object-contain brightness-0 invert"
+              />
             </div>
             <p className="mt-6 font-heading text-2xl font-semibold tracking-tight text-white/90">
               Stronger everyday.
             </p>
             <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-white/50">
-              Private combat-sports coaching in Halifax. Verified coaches, real availability, one
-              coordinated booking.
+              Private combat-sports coaching in Halifax. Personalized training, real people, and
+              progress built around you.
             </p>
           </div>
 
@@ -72,29 +76,16 @@ export default function SiteFooter() {
               <li>Halifax, Nova Scotia</li>
               <li>Private 1:1 sessions</li>
               <li>All levels welcome</li>
-              <li>Times shown in Atlantic Time</li>
+              <li>Coaching built around you</li>
             </ul>
-            <div className="mt-6 flex items-center gap-3 text-white/60">
-              <a href="#" aria-label="Instagram" className="transition-colors hover:text-white">
-                <Instagram className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-              <a href="#" aria-label="TikTok" className="transition-colors hover:text-white">
-                <Music2 className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-              <a href="#" aria-label="YouTube" className="transition-colors hover:text-white">
-                <Youtube className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-              <a href="#" aria-label="Email" className="transition-colors hover:text-white">
-                <Mail className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-            </div>
+            <p className="mt-6 text-[11px] text-white/45">A stronger version of yourself starts here.</p>
           </div>
         </div>
 
         <div className="border-t border-white/10">
           <div className="shell flex flex-col gap-2 py-6 text-[11px] tracking-wide text-white/35 sm:flex-row sm:items-center sm:justify-between">
             <p>© {new Date().getFullYear()} Pehnam. Halifax, NS.</p>
-            <p>Static preview — coach availability and booking are not connected.</p>
+            <p>Preview experience — availability and booking are not connected yet.</p>
           </div>
         </div>
       </div>

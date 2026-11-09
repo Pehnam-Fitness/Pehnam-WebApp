@@ -17,7 +17,7 @@ export default function BookingPage() {
   );
 
   const coaches = useMemo(
-    () => (discipline ? SAMPLE_COACHES.filter((c) => c.discipline === discipline) : SAMPLE_COACHES),
+    () => (discipline ? SAMPLE_COACHES.filter((coach) => coach.disciplines.includes(discipline)) : SAMPLE_COACHES),
     [discipline]
   );
 
@@ -38,7 +38,7 @@ export default function BookingPage() {
             {discipline ?? "Every discipline"}, one coach, your hour.
           </p>
           <p className="text-[11px] text-muted-foreground">
-            Static preview — coach availability and booking are not connected.
+            Preview experience — availability and booking are not connected yet.
           </p>
         </div>
 

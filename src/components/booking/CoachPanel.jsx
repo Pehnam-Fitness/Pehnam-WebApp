@@ -8,10 +8,10 @@ export default function CoachPanel({ coaches }) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="font-heading text-lg font-semibold tracking-tight">
-            Meet our verified Halifax coaches
+            Meet your Halifax coach
           </h2>
           <p className="mt-1 text-[12px] text-muted-foreground">
-            Real experience. Real people. Real results.
+            Personal coaching, built around you.
           </p>
         </div>
         <Link
@@ -29,12 +29,12 @@ export default function CoachPanel({ coaches }) {
             No coaches published for this discipline yet.
           </p>
         ) : (
-          coaches.map((coach) => <CoachRow key={coach.id} coach={coach} />)
+          coaches.slice(0, 3).map((coach) => <CoachRow key={coach.id} coach={coach} />)
         )}
       </div>
 
       <p className="mt-4 text-[10px] leading-relaxed text-muted-foreground/80">
-        Every coach is reviewed by Pehnam before their profile is published.
+        Sample profiles and details for presentation only; confirm before publication.
       </p>
     </section>
   );

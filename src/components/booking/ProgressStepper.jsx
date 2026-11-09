@@ -1,9 +1,9 @@
 const STEPS = [
   "Choose discipline",
-  "Tell us your goal",
-  "Choose time / location",
-  "Pehnam confirms coach",
-  "Secure payment and booking",
+  "Meet a coach",
+  "Set your goals",
+  "Plan your session",
+  "Train with purpose",
 ];
 
 export default function ProgressStepper({ active = 0 }) {

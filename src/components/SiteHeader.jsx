@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MapPin, Menu, X, ArrowRight } from "lucide-react";
-import PandaMark from "@/components/PandaMark";
+import logo from "@/images/pehnam-logo.png";
 
 const NAV = [
+  { label: "Home", to: "/" },
   { label: "Coaches", to: "/coaches" },
   { label: "Disciplines", to: "/disciplines" },
   { label: "How it works", to: "/how-it-works" },
@@ -17,8 +18,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-xl">
       <div className="shell flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <PandaMark className="h-8 w-8 text-foreground" />
-          <span className="font-heading text-[15px] font-semibold tracking-[0.32em]">PEHNAM</span>
+          <img src={logo} alt="Pehnam Fitness" className="h-12 w-[72px] object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">
@@ -26,6 +26,7 @@ export default function SiteHeader() {
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.to === "/"}
               className={({ isActive }) =>
                 `text-[13px] transition-colors ${
                   isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
